@@ -1,0 +1,7 @@
+GET https://3000-diullyledur-planilha-pzziwwgfg58.ws-us62.gitpod.io/transacoes
+###
+
+POST https://3000-diullyledur-planilha-pzziwwgfg58.ws-us62.gitpod.io/transacoes
+content-type: application/json
+
+{"valor": 10}
