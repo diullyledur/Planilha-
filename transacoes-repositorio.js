@@ -2,23 +2,26 @@ const transacoes = {
   transacoes: [
     {
       valor: 10,
-      descricao: 'Pastel'
+      descricao: 'Pastel',
+      categoria: "Despesa"
     },
     {
       valor: 3,
-      descricao: 'Doce'
+      descricao: "venda do doce",
+      categoria: "Receita"
+
     }
   ]
 }
 
 class TransacoesRepositorio {
   listarTransacoes() {
-      return transacoes
+    return transacoes
   }
 
   criarTransacao(transacao) {
-      const lista = transacoes.transacoes
-      lista.push(transacao)
+    const lista = transacoes.transacoes
+    lista.push(transacao)
   }
 }
 
