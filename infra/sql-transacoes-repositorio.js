@@ -15,7 +15,7 @@ class SqlTransacoesRepositorio {
         const valores = [
             transacao.valor,
             transacao.descricao,
-            transacao.catgoria
+            transacao.categoria
         ]
         await pool.query(consulta, valores)
 

@@ -6,6 +6,9 @@ const port = process.env.PORT || 3000
 
 app.use(express.json())
 app.use(express.static(`${__dirname}/public`))
+function mostraReq(req) {
+  console.log(`${req.method} ${req.url} ${JSON.stringify(req.body)}`)
+}
 
 app.get('/transacoes', async (req, res) => {
   const repositorio = new TransacoesRepositorio()
@@ -23,10 +26,12 @@ app.get('/transacoes', async (req, res) => {
 
   transacoes.saldo = saldo
   res.send(transacoes)
+  mostraReq(req)
 })
 
 
 app.post('/transacoes', async (req, res) => {
+  mostraReq(req)
   const repositorio = new TransacoesRepositorio()
   console.log("corpo " + req.body)
   const transacao = req.body

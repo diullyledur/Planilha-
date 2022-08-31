@@ -1,17 +1,3 @@
-const transacoes = {
-  transacoes: [
-    {
-      valor: 10,
-      descricao: 'Pastel',
-      categoria: 'Despesa'
-    },
-    {
-      valor: 3,
-      descricao: 'Doce',
-      categoria: 'Receita'
-    }
-  ]
-}
 
 class TransacoesRepositorio {
   listarTransacoes() {
